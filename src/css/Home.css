@@ -1,0 +1,164 @@
+@import "./colors.css";
+
+* {
+  box-sizing: border-box;
+}
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+} */
+body {
+  background-color: var(--paper);
+  color: var(--textColor);
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      "Georgia", sans-serif; */
+  font-family: "Times New Roman";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: x-small;
+}
+header {
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: flex-start; */
+  /* font-size: xx-large; */
+  margin: 0; /* Remove margin to avoid extra spacing */
+
+  /* height: 70px; */
+}
+content {
+  /* font-family: "ariel"; */
+  display: flex;
+  flex-direction: row;
+  /* overflow: auto; */
+  overflow: hidden; /* Prevents any overflow (like scrollbars) */
+}
+select {
+  appearance: auto;
+  border: 0;
+  font: inherit;
+  color: var(--textColor);
+  cursor: pointer;
+  display: flex;
+  background-color: var(--light);
+  padding: 13px;
+  flex-direction: row;
+  font-size: 20px;
+  font-weight: normal;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid var(--borders);
+  /* border-radius: 10px;
+  margin: 10px; */
+  &:focus {
+    outline: none;
+  }
+}
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.container.darkMode {
+  background-color: black;
+}
+.headerButtonContainer {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.headerButtons {
+  display: flex;
+  background-color: var(--light);
+  padding: 13px;
+  flex-direction: row;
+  font-size: 20px;
+  font-weight: normal;
+  justify-content: center;
+  align-items: center;
+  border-color: var(--borders);
+  border-left: 1px solid var(--borders);
+  /* border-radius: 10px; */
+  margin: 10;
+}
+.bookshelf {
+  position: relative;
+  border: 10px solid var(--borders);
+  width: 25%;
+  overflow-y: scroll;
+}
+.shelf {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  width: 100%;
+  align-items: flex-end;
+}
+.shelf-wood {
+  position: relative;
+  width: 100%;
+  height: 15px;
+  background-color: var(--borders);
+}
+.book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+.upright-book {
+  width: 30px;
+  border-radius: 4px;
+}
+.book-stack {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.book-stack-right {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.invisibleStack {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 3;
+}
+/* GIFs */
+.yarnBallCat {
+  position: absolute;
+  max-width: 400px;
+  max-height: 350px;
+  top: 76px;
+  right: 15px;
+  z-index: 0;
+  transform: scaleX(-1);
+}
+.cat {
+  position: absolute;
+  width: 180px;
+  height: auto;
+  top: 117px;
+  left: 5px;
+  z-index: 1;
+}

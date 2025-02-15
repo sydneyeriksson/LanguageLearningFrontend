@@ -1,0 +1,23 @@
+/* Default Light Theme Colors */
+:root {
+  --borders: #240035;
+  --paper: #fff6f0;
+  --bright: #c972ff;
+  --light: #deb4ff;
+  --dusty: #a16fb8;
+  --textColor: #240035;
+  --hoverPaper: #efdfd5;
+  --flashCard: #e7c0ff;
+}
+
+/* Dark Theme Colors */
+[darkMode="dark"] {
+  --borders: #150136;
+  --paper: #0a0016;
+  --bright: #04155f;
+  --light: #122581;
+  --dusty: #141852;
+  --textColor: #675f8f;
+  --hoverPaper: #1a003b;
+  --flashCard: #240035;
+}
