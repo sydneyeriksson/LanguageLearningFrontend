@@ -13,7 +13,7 @@ const WordButton = ({ initialWord, id, updateMistakeList }) => {
     setWord("Loading ...");
     try {
       // fetch translation
-      const response = await axios.get("http://127.0.0.1:5000/translation", {
+      const response = await axios.get("https://languagelearningbackend.onrender.com/translation", {
         params: {
           word: initialWord,
         },

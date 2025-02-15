@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.905a773e.css",
+    "main.js": "/static/js/main.0e5cbab0.js",
+    "static/js/453.8ab44547.chunk.js": "/static/js/453.8ab44547.chunk.js",
+    "static/media/CatWithYarn.gif": "/static/media/CatWithYarn.a99f2b5d8e9a98948f2b.gif",
+    "static/media/DarkModeCatWithString.gif": "/static/media/DarkModeCatWithString.a04e5c2c6b862c534954.gif",
+    "static/media/PageTurn.png": "/static/media/PageTurn.32e5626973e45c411ba1.png",
+    "static/media/happyReturnCat.png": "/static/media/happyReturnCat.7b31cfefeeef90167af4.png",
+    "static/media/contentReturnCat.png": "/static/media/contentReturnCat.66cf8aa66e94cb31b8d3.png",
+    "static/media/PageTurnDarkMode.png": "/static/media/PageTurnDarkMode.1bb40843a2c3cf66ee17.png",
+    "static/media/DarkModePurpleCat.gif": "/static/media/DarkModePurpleCat.83a41d468fead7c77194.gif",
+    "static/media/PurpleCatMoving.gif": "/static/media/PurpleCatMoving.acfa05367d515e45d5ad.gif",
+    "index.html": "/index.html",
+    "main.905a773e.css.map": "/static/css/main.905a773e.css.map",
+    "main.0e5cbab0.js.map": "/static/js/main.0e5cbab0.js.map",
+    "453.8ab44547.chunk.js.map": "/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.905a773e.css",
+    "static/js/main.0e5cbab0.js"
+  ]
+}
