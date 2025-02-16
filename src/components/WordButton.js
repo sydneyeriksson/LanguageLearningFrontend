@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios"; // Ensure axios is imported
 
-const WordButton = ({ initialWord, id, updateMistakeList }) => {
+const WordButton = ({ initialWord, id, updateMistakeList, language }) => {
   const [word, setWord] = useState(initialWord);
   const [isChecked, setIsChecked] = useState(false); // Track checkbox state locally
 
@@ -16,6 +16,7 @@ const WordButton = ({ initialWord, id, updateMistakeList }) => {
       const response = await axios.get("https://languagelearningbackend.onrender.com/translation", {
         params: {
           word: initialWord,
+          sourceLanguage: language,
         },
       });
 

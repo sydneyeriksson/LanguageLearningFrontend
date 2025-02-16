@@ -9,6 +9,7 @@ const BookPage = ({
   decrementPage,
   updateMistakeList,
   darkMode,
+  language,
 }) => {
   return (
     <div class="pageContainer">
@@ -19,6 +20,7 @@ const BookPage = ({
               initialWord={item}
               id={index}
               updateMistakeList={updateMistakeList}
+              language={language}
             />
           ))
         ) : (

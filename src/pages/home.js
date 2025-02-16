@@ -93,7 +93,6 @@ function Home() {
     sessionStorage.setItem("page", page);
   }, [title, pageNum, language, difficulty]);
 
-
   const updateMistakeList = (mistake) => {
     mistakeList.current.push(mistake);
   };
@@ -597,6 +596,7 @@ function Home() {
           decrementPage={decrementPage}
           updateMistakeList={updateMistakeList}
           darkMode={darkMode}
+          language={language}
         ></BookPage>
       </content>
     </div>
