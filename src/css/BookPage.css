@@ -63,23 +63,23 @@
 .page {
   border-top: 2px solid var(--borders);
   border-left: 0px;
-  position: relative;
+  /* position: relative; */
   overflow-y: scroll;
   width: 100%;
   height: 100%;
-  /* flex: 1; */
-  /* flex-direction: row; */
-
-  justify-content: flex-start;
+  padding: 15px;
+  /* justify-content: flex-start;
   align-content: flex-start;
-  /* background-color: var(--paper); */
   padding: 15px;
   flex-wrap: wrap;
-  display: flex;
+  display: flex; */
 }
 .pageContainer {
   /* border: 2px solid var(--borders); */
-    width: 75%;
+  width: 75%;
   height: 100%;
   position: relative;
+}
+.paragraph {
+  margin-bottom: 1em;
 }

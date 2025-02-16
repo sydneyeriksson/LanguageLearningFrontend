@@ -1,5 +1,6 @@
 import React from "react";
 import WordButton from "../components/WordButton";
+import Paragraph from "../components/Paragraph";
 import PageTurn from "../images/PageTurn.png";
 import PageTurnDarkMode from "../images/PageTurnDarkMode.png";
 
@@ -16,9 +17,8 @@ const BookPage = ({
       <div class="page">
         {page.length > 1 ? (
           page.map((item, index) => (
-            <WordButton
+            <Paragraph
               initialWord={item}
-              id={index}
               updateMistakeList={updateMistakeList}
               language={language}
             />

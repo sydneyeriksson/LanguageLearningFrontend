@@ -14,7 +14,7 @@
   
   .checkbox-button-label {
     display: inline-block;
-    padding: 5px 5px;
+    padding: 5px 5px 4px 4px;
     background-color: var(--paper); /* white background */
     color: var(--textColor);
     border: none;
