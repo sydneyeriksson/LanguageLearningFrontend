@@ -28,6 +28,7 @@ function Home() {
   const location = useLocation();
   const [reloaded, setReloaded] = useState(true);
 
+  // Get previous settings on reload
   if (reloaded) {
     const savedTitle = sessionStorage.getItem("title");
     const savedDifficulty = sessionStorage.getItem("difficulty");
@@ -50,6 +51,13 @@ function Home() {
     setReloaded(false);
   }
 
+  useEffect(() => {
+    sessionStorage.setItem("textSize", textSize);
+    sessionStorage.setItem("font", font);
+    sessionStorage.setItem("darkMode", darkMode);
+  }, [textSize, font, darkMode]);
+
+  // Get the new page from the server
   useEffect(() => {
     if (location.state?.mistakeList) {
       mistakeList.current = location.state.mistakeList;
@@ -83,9 +91,8 @@ function Home() {
     sessionStorage.setItem("font", font);
     sessionStorage.setItem("darkMode", darkMode);
     sessionStorage.setItem("page", page);
-  }, [title, pageNum, language, difficulty, textSize, font, darkMode]);
+  }, [title, pageNum, language, difficulty]);
 
-  //const wordList = page;
 
   const updateMistakeList = (mistake) => {
     mistakeList.current.push(mistake);
