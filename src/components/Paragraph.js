@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import WordButton from "../components/WordButton";
 
-const Paragraph = ({ initialWord, updateMistakeList, language }) => {
+const Paragraph = ({ initialWord, id, updateMistakeList, language }) => {
   const [word, setWord] = useState(initialWord);
 
   return (
@@ -10,7 +10,7 @@ const Paragraph = ({ initialWord, updateMistakeList, language }) => {
       {word.map((item, index) => (
         <WordButton
           initialWord={item}
-          id={index}
+          id={[id, index]}
           updateMistakeList={updateMistakeList}
           language={language}
         />

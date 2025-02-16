@@ -19,6 +19,7 @@ const BookPage = ({
           page.map((item, index) => (
             <Paragraph
               initialWord={item}
+              id={index}
               updateMistakeList={updateMistakeList}
               language={language}
             />
