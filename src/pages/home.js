@@ -152,7 +152,7 @@ function Home() {
             flexDirection: "row",
             width: "100%",
             alignItems: "center",
-            border: "1px solid var(--borders)",
+            border: "1px solid var(--dusty)",
             margin: 0,
             padding: 0,
             backgroundColor: "var(--light)",
@@ -203,7 +203,7 @@ function Home() {
                 <option value="Hard">Hard</option>
               </select> */}
             {/* </div> */}
-            <div>
+            <div class="headerButtons">
               {/* Dark Mode selection component */}
               <select
                 name="darkMode"
@@ -217,7 +217,7 @@ function Home() {
                 <option value="light">Light Mode</option>
               </select>
             </div>
-            <div>
+            <div class="headerButtons">
               {/* Font selection component */}
               <select
                 name="font"
@@ -230,7 +230,7 @@ function Home() {
                 <option value="Georgia">Georgia</option>
               </select>
             </div>
-            <div>
+            <div class="headerButtons">
               {/* Text Size selection component */}
               <select
                 name="textSize"
@@ -249,7 +249,7 @@ function Home() {
               </select>
             </div>
             {/* Language selection component */}
-            <div>
+            <div class="headerButtons">
               <select
                 name="language"
                 id="language"
@@ -307,7 +307,7 @@ function Home() {
             {/* Page selection component */}
             <div
               class="headerButtons"
-              // style={{
+              style={{padding: "13px",}}
               //   display: "flex",
               //   backgroundColor: "var(--light)",
               //   padding: 13,
@@ -344,8 +344,7 @@ function Home() {
               class="headerButtons"
               style={{
                 backgroundColor: "var(--bright)",
-                cursor: "pointer",
-                borderRight: "1px solid var(--borders)",
+                borderRight: "1px solid var(--dusty)",
                 width: "100%",
               }}
               onClick={() => handleGoToFlashCards()}

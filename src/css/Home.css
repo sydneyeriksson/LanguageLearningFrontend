@@ -35,54 +35,61 @@ content {
   overflow: hidden; /* Prevents any overflow (like scrollbars) */
 }
 select {
-  appearance: auto;
+  -webkit-appearance: none; /* Removes default styles in Safari */
+  -moz-appearance: none; /* Removes default styles in Firefox */
+  appearance: none; /* Standard for most browsers */
+  background-color: transparent; /* Optional: make background transparent */
+  /* appearance: auto; */
   border: 0;
   font: inherit;
   color: var(--textColor);
   cursor: pointer;
   display: flex;
-  background-color: var(--light);
+  /* background-color: var(--light); */
   padding: 13px;
-  flex-direction: row;
-  font-size: 20px;
-  font-weight: normal;
+  /* flex-direction: row; */
+  /* font-size: 20px; */
+  /* font-weight: normal; */
   justify-content: center;
   align-items: center;
-  border-left: 1px solid var(--borders);
+  /* width: 100%; */
+  /* border-left: 1px solid var(--borders); */
   /* border-radius: 10px;
   margin: 10px; */
+  border-radius: 0;
+  box-sizing: border-box;
   &:focus {
     outline: none;
   }
+}
+/* For Webkit browsers like Chrome, Safari */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 .container {
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
-.container.darkMode {
-  background-color: black;
-}
 .headerButtonContainer {
   width: 75%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
 }
 .headerButtons {
   display: flex;
   background-color: var(--light);
-  padding: 13px;
   flex-direction: row;
   font-size: 20px;
   font-weight: normal;
   justify-content: center;
   align-items: center;
-  border-color: var(--borders);
-  border-left: 1px solid var(--borders);
-  /* border-radius: 10px; */
-  margin: 10;
+  border-left: 1px solid var(--dusty);
+  cursor: pointer;
+  box-sizing: border-box;
 }
 .bookshelf {
   position: relative;

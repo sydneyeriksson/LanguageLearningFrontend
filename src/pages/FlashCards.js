@@ -70,28 +70,32 @@ function FlashCards() {
         onClick={handleReturnToShelf}
         alt=""
       />
-      <div class="flashCardButtonsContainer">
-        <div className="flashCard" onClick={handleFlipCard}>
-          {mistakeList.length < 1
-            ? "All Done!"
-            : showTranslation
-            ? currentCard.translation
-            : currentCard.word}
-        </div>
-        <div style={{ display: "flex", flexDirection: "row" }}>
-          <div class="changeCardButton" onClick={() => handlePreviousCard()}>
-            {/* left arrow */}
-            &#x2190;
+      {mistakeList.length < 1 ? (
+        <div class="flashCard">All Done!</div>
+      ) : (
+        <div class="flashCardButtonsContainer">
+          <div className="flashCard" onClick={handleFlipCard}>
+            {mistakeList.length < 1
+              ? "All Done!"
+              : showTranslation
+              ? currentCard.translation
+              : currentCard.word}
           </div>
-          <div class="changeCardButton" onClick={() => handleNextCard()}>
-            {/* right arrow */}
-            &#x2192;
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <div class="changeCardButton" onClick={() => handlePreviousCard()}>
+              {/* left arrow */}
+              &#x2190;
+            </div>
+            <div class="changeCardButton" onClick={() => handleNextCard()}>
+              {/* right arrow */}
+              &#x2192;
+            </div>
+          </div>
+          <div class="changeCardButton" onClick={() => removeWord()}>
+            Memorized!
           </div>
         </div>
-        <div class="changeCardButton" onClick={() => removeWord()}>
-          Memorized!
-        </div>
-      </div>
+      )}
     </div>
   );
 }

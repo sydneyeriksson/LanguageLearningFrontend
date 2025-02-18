@@ -61,7 +61,7 @@
   transition: opacity 0.3s ease;
 }
 .page {
-  border-top: 2px solid var(--borders);
+  border-top: 2px solid var(--dusty);
   border-left: 0px;
   /* position: relative; */
   overflow-y: scroll;
