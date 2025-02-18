@@ -203,7 +203,7 @@ function Home() {
                 <option value="Hard">Hard</option>
               </select> */}
             {/* </div> */}
-            <div class="headerButtons">
+            <div class="select-dropdown">
               {/* Dark Mode selection component */}
               <select
                 name="darkMode"
@@ -217,7 +217,7 @@ function Home() {
                 <option value="light">Light Mode</option>
               </select>
             </div>
-            <div class="headerButtons">
+            <div class="select-dropdown">
               {/* Font selection component */}
               <select
                 name="font"
@@ -230,7 +230,7 @@ function Home() {
                 <option value="Georgia">Georgia</option>
               </select>
             </div>
-            <div class="headerButtons">
+            <div class="select-dropdown">
               {/* Text Size selection component */}
               <select
                 name="textSize"
@@ -249,7 +249,7 @@ function Home() {
               </select>
             </div>
             {/* Language selection component */}
-            <div class="headerButtons">
+            <div class="select-dropdown">
               <select
                 name="language"
                 id="language"
@@ -307,7 +307,7 @@ function Home() {
             {/* Page selection component */}
             <div
               class="headerButtons"
-              style={{padding: "13px",}}
+              style={{ padding: "13px" }}
               //   display: "flex",
               //   backgroundColor: "var(--light)",
               //   padding: 13,
