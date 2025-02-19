@@ -99,7 +99,7 @@ function FlashCards() {
       )}
       <div
         class="mobile-content"
-        style={{ fontSize: textSize, fontFamily: font, height: "500px" }}
+        style={{ height: "500px" }}
       >
         </div>
     </div>
