@@ -30,7 +30,7 @@ header {
 content {
   /* font-family: "ariel"; */
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   /* overflow: auto; */
   overflow: hidden; /* Prevents any overflow (like scrollbars) */
 }
@@ -63,6 +63,26 @@ select {
     outline: none;
   }
 }
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  border: 1px solid var(--dusty);
+  margin: 0;
+  padding: 0;
+  background-color: var(--light);
+}
+/* Hide mobile content by default */
+.mobile-content {
+  display: none;
+}
+.title {
+  font-size: xx-large;
+  width: 360px;
+  justify-content: center;
+  padding-left: 20px;
+}
 .select-dropdown,
 .select-dropdown * {
   margin: 0;
@@ -73,18 +93,31 @@ select {
 .select-dropdown {
   position: relative;
 }
+/* .headerContainer {
+  flex: 1;
+  flex-wrap: wrap;
+  background-color: red;
+  /* flex-grow: 1; */
+/* display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid var(--dusty);
+  background-color: var(--light); 
+} */
 .headerButtons {
   display: flex;
-  background-color: var(--light);
+  /* background-color: var(--light); */
   flex-direction: row;
   font-size: 20px;
   font-weight: normal;
   justify-content: center;
   align-items: center;
-  border-left: 1px solid var(--dusty);
+  border: 1px solid var(--dusty);
   cursor: pointer;
   box-sizing: border-box;
-  padding-right: 20px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 .select-dropdown select {
   font-weight: normal;
@@ -92,14 +125,15 @@ select {
   padding: 8px 24px 8px 10px;
   border: none;
   background-color: transparent;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  font-size: 20px;
+  /* height: 100%; */
+  /* display: flex; */
+  /* flex-direction: row; */
+  font-size: large;
   justify-content: center;
   align-items: center;
-  border-left: 1px solid var(--dusty);
+  border: 1px solid var(--dusty);
   cursor: pointer;
+  box-sizing: border-box;
 }
 .select-dropdown select:active,
 .select-dropdown select:focus {
@@ -130,16 +164,17 @@ input[type="number"]::-webkit-inner-spin-button {
   flex-direction: column;
 }
 .headerButtonContainer {
-  width: 75%;
+  flex: 1;
+  flex-wrap: wrap;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: stretch;
+  /* align-items: stretch; */
 }
 .bookshelf {
-  position: relative;
+  /* position: relative; */
   border: 10px solid var(--borders);
-  width: 25%;
+  width: 360px;
   overflow-y: scroll;
 }
 .shelf {
