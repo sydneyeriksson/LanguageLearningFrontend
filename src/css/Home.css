@@ -32,7 +32,7 @@ content {
   display: flex;
   /* flex-direction: row; */
   /* overflow: auto; */
-  overflow: hidden; /* Prevents any overflow (like scrollbars) */
+  overflow: hidden;
 }
 select {
   -webkit-appearance: none; /* Removes default styles in Safari */
@@ -175,6 +175,7 @@ input[type="number"]::-webkit-inner-spin-button {
   /* position: relative; */
   border: 10px solid var(--borders);
   width: 360px;
+  height: 100%;
   overflow-y: scroll;
 }
 .shelf {
