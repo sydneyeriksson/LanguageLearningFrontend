@@ -101,20 +101,20 @@ function FlashCards() {
             <div class="changeCardButton" onClick={() => removeWord()}>
               Memorized!
             </div>
-            <div class="mobile-content">
-              <div
-                class="changeCardButton"
-                style={{
-                  marginTop: "100px",
-                  border: "2px solid var(--borders)",
-                }}
-                onClick={handleReturnToShelf}
-              >
-                Return to Bookshelf
-              </div>
-            </div>
           </div>
         )}
+        <div class="mobile-content">
+          <div
+            class="changeCardButton"
+            style={{
+              marginTop: "100px",
+              border: "2px solid var(--borders)",
+            }}
+            onClick={handleReturnToShelf}
+          >
+            Return to Bookshelf
+          </div>
+        </div>
       </div>
     </div>
   );
