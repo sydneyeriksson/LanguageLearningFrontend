@@ -2,7 +2,7 @@ import contentReturnBookshelfCat from "../images/contentReturnCat.png";
 import happyReturnBookshelfCat from "../images/happyReturnCat.png";
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import "../css/FlashCards.css";
+import "../css/index.css";
 
 function FlashCards() {
   const navigate = useNavigate(); // Hook for navigation
@@ -63,45 +63,59 @@ function FlashCards() {
 
   return (
     <div class="background">
-      <div class="catChair"></div>
-      <img
-        class="contentReturnBookshelfCat"
-        src={mistakeList.length < 1 ? happyReturnBookshelfCat : currentCat}
-        onClick={handleReturnToShelf}
-        alt=""
-      />
-      {mistakeList.length < 1 ? (
-        <div class="flashCard">All Done!</div>
-      ) : (
-        <div class="flashCardButtonsContainer">
-          <div className="flashCard" onClick={handleFlipCard}>
-            {/* {mistakeList.length < 1
+      <div class="catContainer">
+        <div class="catChair"></div>
+        <img
+          class="contentReturnBookshelfCat"
+          src={mistakeList.length < 1 ? happyReturnBookshelfCat : currentCat}
+          onClick={handleReturnToShelf}
+          alt=""
+        />
+      </div>
+      <div class="flashCardContainer">
+        {mistakeList.length < 1 ? (
+          <div class="flashCard">All Done!</div>
+        ) : (
+          <div class="flashCardButtonsContainer">
+            <div className="flashCard" onClick={handleFlipCard}>
+              {/* {mistakeList.length < 1
               ? "All Done!"
               : showTranslation
               ? currentCard.translation
               : currentCard.word} */}
-            {showTranslation ? currentCard.translation : currentCard.word}
-          </div>
-          <div style={{ display: "flex", flexDirection: "row" }}>
-            <div class="changeCardButton" onClick={() => handlePreviousCard()}>
-              {/* left arrow */}
-              &#x2190;
+              {showTranslation ? currentCard.translation : currentCard.word}
             </div>
-            <div class="changeCardButton" onClick={() => handleNextCard()}>
-              {/* right arrow */}
-              &#x2192;
+            <div style={{ display: "flex", flexDirection: "row" }}>
+              <div
+                class="changeCardButton"
+                onClick={() => handlePreviousCard()}
+              >
+                {/* left arrow */}
+                &#x2190;
+              </div>
+              <div class="changeCardButton" onClick={() => handleNextCard()}>
+                {/* right arrow */}
+                &#x2192;
+              </div>
+            </div>
+            <div class="changeCardButton" onClick={() => removeWord()}>
+              Memorized!
+            </div>
+            <div class="mobile-content">
+              <div
+                class="changeCardButton"
+                style={{
+                  marginTop: "100px",
+                  border: "2px solid var(--borders)",
+                }}
+                onClick={handleReturnToShelf}
+              >
+                Return to Bookshelf
+              </div>
             </div>
           </div>
-          <div class="changeCardButton" onClick={() => removeWord()}>
-            Memorized!
-          </div>
-        </div>
-      )}
-      <div
-        class="mobile-content"
-        style={{ height: "500px" }}
-      >
-        </div>
+        )}
+      </div>
     </div>
   );
 }

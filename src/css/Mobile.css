@@ -16,6 +16,7 @@
     border: 1px solid var(--dusty);
     border-bottom: 0;
     justify-content: center;
+    background-color: var(--light);
   }
   .container {
     overflow-y: scroll;
@@ -65,5 +66,42 @@
   .mobile-content {
     display: block;
     box-sizing: border-box;
+  }
+  .flashCardContainer {
+    flex: 0;
+  }
+  .flashCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    border-radius: 40px;
+    padding: 20px;
+    height: 250px;
+    cursor: pointer;
+    min-width: 300px;
+  }
+  .changeCardButton {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: x-large;
+    border-radius: 20px;
+    height: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    cursor: pointer;
+    margin: 10px;
+    margin-bottom: 0px;
+  }
+  .catContainer {
+    display: none;
+  }
+  .bookshelf {
+    background-color: var(--paper);
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
   }
 }
