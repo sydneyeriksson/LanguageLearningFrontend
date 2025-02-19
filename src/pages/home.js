@@ -212,7 +212,7 @@ function Home() {
           id="wide-view"
         ></Header>
       </header>
-      <content style={{ fontSize: textSize, fontFamily: font }}>
+      <content id="swipeArea" style={{ fontSize: textSize, fontFamily: font }}>
         <div class="noDisplayOnMedia">
           <Bookshelf
             handleClickBook={handleClickBook}

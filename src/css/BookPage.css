@@ -5,7 +5,7 @@
 .PageTurnContainer:hover .PageTurn {
   opacity: 1;
 }
-.PageTurn {
+/* .PageTurn {
   position: absolute;
   width: 60px;
   bottom: -7px;
@@ -14,7 +14,7 @@
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s ease;
-}
+} */
 .PageBeneath {
   position: absolute;
   bottom: 0px;
@@ -34,16 +34,19 @@
 .PageTurnLeftContainer:hover .PageTurnLeft {
   opacity: 1;
 }
-.PageTurnLeft {
-  position: absolute;
-  width: 60px;
-  bottom: -7px;
-  left: -2px;
+.PageTurn {
+  font-size: xxx-large;
+  margin: 20px;
+  position: relative;
   z-index: 0;
   cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  transform: scaleX(-1);
+}
+.footer {
+  width: 100%;
+  height: 50;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .PageBeneathLeft {
   position: absolute;

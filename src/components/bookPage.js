@@ -31,26 +31,35 @@ const BookPage = ({
             updateMistakeList={updateMistakeList}
           />
         )}
-        <div style={{ width: "100%", height: 50 }}></div>
+        <div class="footer">
+          <div class="PageTurn" onClick={() => decrementPage()}>
+            &#x2190;
+          </div>
+          <div class="PageTurn" onClick={() => incrementPage()}>
+            &#x2192;
+          </div>
+        </div>
       </div>
-      <div class="PageTurnLeftContainer">
-        <div class="PageBeneathLeft"></div>
-        <img
-          class="PageTurnLeft"
-          src={darkMode == "light" ? PageTurn : PageTurnDarkMode}
-          alt="PageTurnLeft"
-          onClick={() => decrementPage()}
-        />
-      </div>
-      <div class="PageTurnContainer">
-        <div class="PageBeneath"></div>
-        <img
-          class="PageTurn"
-          src={darkMode == "light" ? PageTurn : PageTurnDarkMode}
-          alt="PageTurn"
-          onClick={() => incrementPage()}
-        />
-      </div>
+      {/* <div class="noDisplayOnMedia">
+        <div class="PageTurnLeftContainer">
+          <div class="PageBeneathLeft"></div>
+          <img
+            class="PageTurnLeft"
+            src={darkMode == "light" ? PageTurn : PageTurnDarkMode}
+            alt="PageTurnLeft"
+            onClick={() => decrementPage()}
+          />
+        </div>
+        <div class="PageTurnContainer">
+          <div class="PageBeneath"></div>
+          <img
+            class="PageTurn"
+            src={darkMode == "light" ? PageTurn : PageTurnDarkMode}
+            alt="PageTurn"
+            onClick={() => incrementPage()}
+          />
+        </div>
+      </div> */}
     </div>
   );
 };
