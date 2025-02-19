@@ -97,6 +97,11 @@ function FlashCards() {
           </div>
         </div>
       )}
+      <div
+        class="mobile-content"
+        style={{ fontSize: textSize, fontFamily: font, height: "500px" }}
+      >
+        </div>
     </div>
   );
 }
