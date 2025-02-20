@@ -74,15 +74,12 @@ function FlashCards() {
       </div>
       <div class="flashCardContainer">
         {mistakeList.length < 1 ? (
-          <div class="flashCard">All Done!</div>
+          <div class="flashCardButtonsContainer">
+            <div class="flashCard">All Done!</div>
+          </div>
         ) : (
           <div class="flashCardButtonsContainer">
             <div className="flashCard" onClick={handleFlipCard}>
-              {/* {mistakeList.length < 1
-              ? "All Done!"
-              : showTranslation
-              ? currentCard.translation
-              : currentCard.word} */}
               {showTranslation ? currentCard.translation : currentCard.word}
             </div>
             <div style={{ display: "flex", flexDirection: "row" }}>

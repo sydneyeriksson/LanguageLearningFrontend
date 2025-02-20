@@ -1,9 +1,5 @@
 import React, { useState, useEffect, setPage, useRef } from "react";
 import axios from "axios";
-import catWithYarn from "../images/CatWithYarn.gif";
-import DarkModeCatWithString from "../images/DarkModeCatWithString.gif";
-import PurpleCatMoving from "../images/PurpleCatMoving.gif";
-import DarkModePurpleCat from "../images/DarkModePurpleCat.gif";
 import BookPage from "../components/bookPage";
 import Bookshelf from "../components/Bookshelf";
 import Header from "../components/Header";
@@ -231,81 +227,6 @@ function Home() {
         ></BookPage>
       </content>
     </div>
-    // <div class="container" style={{ fontFamily: font }}>
-    //   {/* Header */}
-    //   <div class="mobile-content">
-    //     <details>
-    //       <summary>Bookshelf</summary>
-    //       <Bookshelf
-    //         handleClickBook={handleClickBook}
-    //         darkMode={darkMode}
-    //       ></Bookshelf>
-    //     </details>
-    //     <details>
-    //       <summary>Settings</summary>
-    //       <Header
-    //         title={title}
-    //         setDarkMode={setDarkMode}
-    //         setLanguage={setLanguage}
-    //         setTextSize={setTextSize}
-    //         setDifficulty={setDifficulty}
-    //         setFont={setFont}
-    //         darkMode={darkMode}
-    //         language={language}
-    //         textSize={textSize}
-    //         difficulty={difficulty}
-    //         font={font}
-    //         pageNum={pageNum}
-    //         handleGoToPage={handleGoToPage}
-    //         handleBlur={handleBlur}
-    //         handleGoToFlashCards={handleGoToFlashCards}
-    //         document={document}
-    //       ></Header>
-    //     </details>
-    //     <BookPage
-    //       page={page}
-    //       incrementPage={incrementPage}
-    //       decrementPage={decrementPage}
-    //       updateMistakeList={updateMistakeList}
-    //       darkMode={darkMode}
-    //       language={language}
-    //     ></BookPage>
-    //   </div>
-    //   <header>
-    //     <Header
-    //       title={title}
-    //       setDarkMode={setDarkMode}
-    //       setLanguage={setLanguage}
-    //       setTextSize={setTextSize}
-    //       setDifficulty={setDifficulty}
-    //       setFont={setFont}
-    //       darkMode={darkMode}
-    //       language={language}
-    //       textSize={textSize}
-    //       difficulty={difficulty}
-    //       font={font}
-    //       pageNum={pageNum}
-    //       handleGoToPage={handleGoToPage}
-    //       handleBlur={handleBlur}
-    //       handleGoToFlashCards={handleGoToFlashCards}
-    //       document={document}
-    //     ></Header>
-    //   </header>
-    //   <content style={{ fontSize: textSize, fontFamily: font }}>
-    //     <Bookshelf
-    //       handleClickBook={handleClickBook}
-    //       darkMode={darkMode}
-    //     ></Bookshelf>
-    //     <BookPage
-    //       page={page}
-    //       incrementPage={incrementPage}
-    //       decrementPage={decrementPage}
-    //       updateMistakeList={updateMistakeList}
-    //       darkMode={darkMode}
-    //       language={language}
-    //     ></BookPage>
-    //   </content>
-    // </div>
   );
 }
 
