@@ -9,6 +9,8 @@ This list can then be reviewed using a built-in flashcard deck for better learni
 
 [Click here to see the library web app](https://language-learning-frontend-puce.vercel.app/)
 
+[Link to Backend Repository](https://github.com/sydneyeriksson/LanguageLearningBackend)
+
 ## Features
 - [Interactive Bookshelf](#interactive-bookshelf)
 - [Words That Translate on Click](#words-that-translate-on-click)
