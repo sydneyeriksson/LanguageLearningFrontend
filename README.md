@@ -7,6 +7,10 @@ Users can customize the reading experience with options for light/dark mode, tex
 Additionally, users can click on words they don't understand, which will translate the word to English and add it to a "mistakes" list. 
 This list can then be reviewed using a built-in flashcard deck for better learning.
 
+I built this web app, because while there are many great tools for language learning on the internet, 
+these mainly focus on the few languages which have the the most native speakers. This app utilizes the googletrans API to translate Gutenberg books into any language,
+allowing users to learn a much wider range of languages.
+
 [Click here to see the library web app](https://language-learning-frontend-puce.vercel.app/)
 
 [Link to Backend Repository](https://github.com/sydneyeriksson/LanguageLearningBackend)
