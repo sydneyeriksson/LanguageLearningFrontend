@@ -109,14 +109,7 @@ user to reconfigure their preferences.
 
 
 ### Seamless Page Turning
-To make it easier for users to navigate to a specific page, I implemented a number input field where users can type in page numbers directly.
-
-To provide a more interactive and immersive experience, I designed a "page turn" image that mimics the action of turning a page in a real book. 
-This image appears when the user hovers over it. When the user clicks on the image in the bottom left corner, the page number decrements by one. 
-Similarly, clicking on the image in the bottom right corner increments the page number by one.
-
-I also added a small blank footer at the bottom of the page. This ensures that the "page turn" image doesn’t interfere with users trying to 
-click on words, maintaining a smooth and user-friendly interaction.
+I also added a small footer at the bottom of the page that includes arrows. When clicked, these arrows allow users to increment or decrement the page number, enabling smooth navigation through pages.
 
 <img src="READMEimages/page_turn.png" alt="page_turn" width="400">
 
