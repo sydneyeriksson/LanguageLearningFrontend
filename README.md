@@ -1,4 +1,5 @@
 # Library Web App for Language Learning
+![Project Overview](READMEimages/language_app_overview.png)
 
 ## Description
 A react + flask web app that allows users to select a Gutenberg Library book from a bookshelf, and then read it in any language. 
@@ -17,7 +18,8 @@ This list can then be reviewed using a built-in flashcard deck for better learni
 - [Seamless Page Turning](#seamless-page-turning)
 
 ### Interactive Bookshelf
-The Bookshelf component is a visually interactive feature that simulates a bookshelf filled with clickable books. 
+<img src="READMEimages/bookshelf.png" alt="Project Overview" width="150" style="float: left; margin-right: 20px;">
+<p>The Bookshelf component is a visually interactive feature that simulates a bookshelf filled with clickable books. 
 Each book in the stack is styled dynamically using CSS variables, and users can click on these books to read them in the page section. 
 When the user clicks on a book, the backend is called with the book title as a parameter and returns the page for the user to read. 
 This allows for a seamless user experience where users can visually navigate through a collection of books, all while maintaining a playful, 
@@ -26,7 +28,7 @@ whimsical design.
 The bookshelf is divided into multiple shelves, each containing a set of books arranged creatively with varying heights and rotations, 
 making the interface both engaging and realistic.
 
-This component also includes two cat characters as gifs that move periodically, enhancing the interactive experience.
+This component also includes two cat characters as gifs that move periodically, enhancing the interactive experience.</p>
 
 ### Words That Translate on Click
 Word translation on click allows users to toggle between the original word and its translated form, 
