@@ -1,4 +1,5 @@
 # Library Web App for Language Learning
+![Project Overview](READMEimages/language_app_overview.png)
 
 ## Description
 A react + flask web app that allows users to select a Gutenberg Library book from a bookshelf, and then read it in any language. 
@@ -28,6 +29,8 @@ making the interface both engaging and realistic.
 
 This component also includes two cat characters as gifs that move periodically, enhancing the interactive experience.
 
+<img src="READMEimages/bookshelf.png" alt="bookshelf" width="150">
+
 ### Words That Translate on Click
 Word translation on click allows users to toggle between the original word and its translated form, 
 while also adding words to a review list, offering a seamless learning experience.
@@ -48,6 +51,9 @@ When users click on a word, the word and its translation are added to the mistak
 The background color of each word changes when it is selected to provide a visual indicator of which words 
 are translated and which are in the original language.
 
+<img src="READMEimages/translated_text.png" alt="translated_text" width="200">
+<img src="READMEimages/untranslated_text.png" alt="untranslated_text" width="200">
+
 ### Flash Cards
 The Flash Cards page is a dynamic learning tool that helps users review words from a custom list, displaying them in either the original 
 language or their translation. Users can navigate through flashcards, flipping between the word and its translation, and marking words as 
@@ -63,6 +69,8 @@ The interface also includes intuitive controls to move through the deck with nex
 reward by switching the cat image when a word is marked as memorized. The app is designed to be interactive and engaging, 
 making language learning both fun and effective.
 
+<img src="READMEimages/flash_card.png" alt="flash_card" width="400">
+
 ### Adjustable Book Settings
 The book settings include two select dropdowns and a number input field in the header, enabling users to customize their 
 experience by selecting a difficulty level and a language, as well as entering a page number.
@@ -76,6 +84,9 @@ To persist user preferences across sessions and page navigations, I utilized ses
 This ensures that whenever a user changes a setting, the updated configuration is saved to session storage. 
 Upon returning to the page, the application checks for any saved settings and, if present, restores them, 
 providing a seamless user experience without requiring the user to reconfigure their preferences.
+
+<img src="READMEimages/settings.png" alt="settings" width="200">
+<img src="READMEimages/settings_in_action.png" alt="settings_in_action" width="200">
 
 ### Custom Fonts and Colors
 The header includes three select dropdowns, allowing users to choose between light mode and dark mode, a font style, and a font size.
@@ -91,6 +102,11 @@ To persist user preferences across sessions and page navigations, I utilized ses
 This ensures that whenever a user changes a setting, the updated configuration is saved to session storage. Upon returning to the page, 
 the application checks for any saved settings and, if present, restores them, providing a seamless user experience without requiring the 
 user to reconfigure their preferences.
+
+<img src="READMEimages/uncustomized-text.png" alt="uncustomized-text" width="400">
+<img src="READMEimages/custom-text.png" alt="custom_text" width="400">
+
+
 
 ### Seamless Page Turning
 To make it easier for users to navigate to a specific page, I implemented a number input field where users can type in page numbers directly.
