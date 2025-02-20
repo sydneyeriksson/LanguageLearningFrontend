@@ -118,5 +118,5 @@ Similarly, clicking on the image in the bottom right corner increments the page 
 I also added a small blank footer at the bottom of the page. This ensures that the "page turn" image doesn’t interfere with users trying to 
 click on words, maintaining a smooth and user-friendly interaction.
 
-
+<img src="READMEimages/page_turn.png" alt="page_turn" width="400">
 
