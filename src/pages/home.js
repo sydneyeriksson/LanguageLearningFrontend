@@ -100,6 +100,8 @@ function Home() {
   };
 
   const handleClickBook = (newTitle) => {
+    const details = document.getElementById("bookshelf_details");
+    details.removeAttribute("open");
     setTitle(newTitle);
   };
 
@@ -152,7 +154,7 @@ function Home() {
         class="mobile-content"
         style={{ fontSize: textSize, fontFamily: font }}
       >
-        <details>
+        <details id="bookshelf_details">
           <summary>Bookshelf</summary>
           <Bookshelf
             handleClickBook={handleClickBook}
