@@ -12,7 +12,7 @@ function Home() {
   // const wordList = location.state?.mistakeList || [];
   const [title, setTitle] = useState("Alice in Wonderland.txt");
   const [pageNum, setPageNum] = useState(1);
-  const [language, setLanguage] = useState("english");
+  const [language, setLanguage] = useState("dutch");
   const [difficulty, setDifficulty] = useState("Hard");
   const [textSize, setTextSize] = useState("medium");
   const [font, setFont] = useState("Times New Roman");
