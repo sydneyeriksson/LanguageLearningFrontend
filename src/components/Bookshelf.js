@@ -157,23 +157,23 @@ const Bookshelf = ({ handleClickBook, darkMode }) => {
           <div
             class="book"
             style={{ backgroundColor: "var(--light)", width: "85%" }}
-            onClick={() => handleClickBook("")}
+            onClick={() => handleClickBook("Walden.txt")}
           >
-            <i></i>
+            <i>Walden</i>
           </div>
           <div
             class="book"
             style={{ backgroundColor: "var(--bright)", width: "95%" }}
-            onClick={() => handleClickBook("")}
+            onClick={() => handleClickBook("Wizard of Oz.txt")}
           >
-            <i></i>
+            <i>Wizard of Oz</i>
           </div>
           <div
             class="book"
             style={{ backgroundColor: "var(--dusty)", width: "96%" }}
-            onClick={() => handleClickBook("")}
+            onClick={() => handleClickBook("Secret Garden.txt")}
           >
-            <i></i>
+            <i>Secret Garden</i>
           </div>
         </div>
         <div class="book-stack">
@@ -187,16 +187,16 @@ const Bookshelf = ({ handleClickBook, darkMode }) => {
           <div
             class="book"
             style={{ backgroundColor: "var(--light)", width: "60%" }}
-            onClick={() => handleClickBook("")}
+            onClick={() => handleClickBook("Heidi.txt")}
           >
-            <i></i>
+            <i>Heidi</i>
           </div>
           <div
             class="book"
             style={{ backgroundColor: "var(--dusty)", width: "80%" }}
-            onClick={() => handleClickBook("")}
+            onClick={() => handleClickBook("Sherlock Holmes.txt")}
           >
-            <i></i>
+            <i>Sherlock Holmes</i>
           </div>
           <div
             class="book"
