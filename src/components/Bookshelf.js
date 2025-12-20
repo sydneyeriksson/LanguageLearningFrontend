@@ -201,16 +201,16 @@ const Bookshelf = ({ handleClickBook, darkMode }) => {
           <div
             class="book"
             style={{ backgroundColor: "var(--bright)", width: "80%" }}
-            onClick={() => handleClickBook("")}
+            onClick={() => handleClickBook("Carmilla.txt")}
           >
-            <i></i>
+            <i>Carmilla</i>
           </div>
           <div
             class="book"
             style={{ backgroundColor: "var(--dusty)", width: "90%" }}
-            onClick={() => handleClickBook("")}
+            onClick={() => handleClickBook("Black Beauty.txt")}
           >
-            <i></i>
+            <i>Black Beauty</i>
           </div>
         </div>
         <div class="book-stack-right">
