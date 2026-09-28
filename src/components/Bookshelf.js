@@ -138,7 +138,7 @@ const Bookshelf = ({
         </div>
         <img
           class="cat"
-          src={darkMode == "light" ? PurpleCatMoving : DarkModePurpleCat}
+          src={darkMode === "light" ? PurpleCatMoving : DarkModePurpleCat}
           alt="PurpleCatMoving"
         />
       </div>
@@ -196,7 +196,7 @@ const Bookshelf = ({
         </div>
         <img
           class="yarnBallCat"
-          src={darkMode == "light" ? catWithYarn : DarkModeCatWithString}
+          src={darkMode === "light" ? catWithYarn : DarkModeCatWithString}
           alt="catWithYarn"
           style={{ zIndex: 1 }}
         />

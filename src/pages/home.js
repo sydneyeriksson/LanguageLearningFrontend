@@ -1,4 +1,4 @@
-import React, { useState, useEffect, setPage, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import BookPage from "../components/bookPage";
 import Bookshelf from "../components/Bookshelf";
@@ -96,9 +96,6 @@ function Home() {
     sessionStorage.setItem("difficulty", difficulty);
     sessionStorage.setItem("pageNum", pageNum);
     sessionStorage.setItem("language", language);
-    sessionStorage.setItem("textSize", textSize);
-    sessionStorage.setItem("font", font);
-    sessionStorage.setItem("darkMode", darkMode);
     sessionStorage.setItem("page", page);
     sessionStorage.setItem("customBook", JSON.stringify(customBook));
   }, [title, pageNum, language, difficulty, customBook]);

@@ -1,8 +1,8 @@
 import React from "react";
 import WordButton from "../components/WordButton";
 import Paragraph from "../components/Paragraph";
-import PageTurn from "../images/PageTurn.png";
-import PageTurnDarkMode from "../images/PageTurnDarkMode.png";
+// import PageTurn from "../images/PageTurn.png";
+// import PageTurnDarkMode from "../images/PageTurnDarkMode.png";
 
 const BookPage = ({
   page,
