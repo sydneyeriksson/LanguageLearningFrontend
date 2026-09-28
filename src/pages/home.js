@@ -58,12 +58,11 @@ function Home() {
     sessionStorage.setItem("textSize", textSize);
     sessionStorage.setItem("font", font);
     sessionStorage.setItem("darkMode", darkMode);
-  }, [textSize, font, darkMode]);
+    sessionStorage.setItem("page", page);
+  }, [textSize, font, darkMode, page]);
 
   // Get the new page from the server
   useEffect(() => {
-    console.log(customBook);
-    console.log(page);
     if (customBook && customBook.length === 0) {
       setPage([]);
 
@@ -90,16 +89,15 @@ function Home() {
     sessionStorage.setItem("difficulty", difficulty);
     sessionStorage.setItem("pageNum", pageNum);
     sessionStorage.setItem("language", language);
-    sessionStorage.setItem("page", page);
     sessionStorage.setItem("customBook", JSON.stringify(customBook));
-  }, [title, pageNum, language, difficulty, customBook, page]);
+  }, [title, pageNum, language, difficulty, customBook]);
 
   // Keep the mistake list in sync with navigation state
   useEffect(() => {
     if (location.state?.mistakeList) {
       mistakeList.current = location.state.mistakeList;
     }
-  }, [location.state]);
+  }, [location.state?.mistakeList]);
 
   const updateMistakeList = (mistake) => {
     mistakeList.current.push(mistake);
