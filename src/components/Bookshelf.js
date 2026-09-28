@@ -3,12 +3,63 @@ import DarkModeCatWithString from "../images/DarkModeCatWithString.gif";
 import PurpleCatMoving from "../images/PurpleCatMoving.gif";
 import DarkModePurpleCat from "../images/DarkModePurpleCat.gif";
 
-const Bookshelf = ({ handleClickBook, darkMode }) => {
+const Bookshelf = ({
+  handleClickBook,
+  darkMode,
+  setCustomBook,
+  setPage,
+  setTitle,
+}) => {
   return (
     <div class="bookshelf" style={{ fontSize: 15, font: "Georgia" }}>
       {/* Top Shelf */}
       <div class="shelf">
         <div class="book-stack">
+          <div
+            class="book"
+            style={{ backgroundColor: "var(--bright)", width: "70%" }}
+            onClick={() => {
+              setTitle("Custom Book.txt");
+              const text = window.prompt(
+                "Paste the text you want to read here:",
+              );
+              if (text && text.trim()) {
+                const WORDS_PER_PAGE = 500;
+
+                const paragraphs = text
+                  .split(/\n\n+/)
+                  .map((p) => p.split(/\s+/).filter(Boolean))
+                  .filter((p) => p.length > 0);
+
+                const book = []; // array of pages
+                let page = []; // array of paragraphs
+                let current = []; // array of words
+                let wordCount = 0;
+
+                for (const para of paragraphs) {
+                  for (const word of para) {
+                    if (wordCount === WORDS_PER_PAGE) {
+                      if (current.length) page.push(current);
+                      book.push(page);
+                      page = [];
+                      current = [];
+                      wordCount = 0;
+                    }
+                    current.push(word);
+                    wordCount++;
+                  }
+                  page.push(current);
+                  current = [];
+                }
+                if (page.length) book.push(page);
+
+                setCustomBook(book);
+                setPage(book[0] ?? []);
+              }
+            }}
+          >
+            <i>Custom Book</i>
+          </div>
           <div
             class="book"
             style={{ backgroundColor: "var(--light)", width: "95%" }}

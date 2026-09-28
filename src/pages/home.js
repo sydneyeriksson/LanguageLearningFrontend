@@ -6,6 +6,8 @@ import Header from "../components/Header";
 import { useNavigate, useLocation } from "react-router-dom";
 import "../css/index.css";
 
+const BACKEND_URL = "https://languagelearningbackend.onrender.com";
+
 function Home() {
   // Get the word list from the home page
   // const location = useLocation();
@@ -25,6 +27,7 @@ function Home() {
   const [page, setPage] = useState([]);
   const location = useLocation();
   const [reloaded, setReloaded] = useState(true);
+  const [customBook, setCustomBook] = useState([]);
 
   // Get previous settings on reload
   if (reloaded) {
@@ -36,6 +39,7 @@ function Home() {
     const savedFont = sessionStorage.getItem("font");
     const savedDarkMode = sessionStorage.getItem("darkMode");
     const savedPage = sessionStorage.getItem("page");
+    const savedCustomBook = sessionStorage.getItem("customBook");
 
     if (savedTitle) setTitle(String(savedTitle));
     if (savedDifficulty) setDifficulty(String(savedDifficulty));
@@ -45,6 +49,7 @@ function Home() {
     if (savedFont) setFont(String(savedFont));
     if (savedDarkMode) setDarkMode(String(savedDarkMode));
     if (savedPage) setPage(Array(savedPage));
+    if (savedCustomBook) setCustomBook(JSON.parse(savedCustomBook));
     document.documentElement.setAttribute("darkMode", darkMode);
     setReloaded(false);
   }
@@ -60,26 +65,32 @@ function Home() {
     if (location.state?.mistakeList) {
       mistakeList.current = location.state.mistakeList;
     }
-    setPage([]);
-    // if (location.state?.mistakeList) {
-    //   mistakeList.current = location.state.mistakeList;
-    // }
+    console.log(customBook);
+    console.log(page);
+    if (customBook && customBook.length === 0) {
+      setPage([]);
+      if (location.state?.mistakeList) {
+        mistakeList.current = location.state.mistakeList;
+      }
 
-    axios
-      .get("https://languagelearningbackend.onrender.com/book", {
-        params: {
-          pageNum: pageNum,
-          title: title,
-          difficulty: difficulty,
-          language: language,
-        },
-      })
-      .then((response) => {
-        setPage(response.data.page);
-      })
-      .catch((error) => {
-        console.error("There was an error fetching the page!", error);
-      });
+      axios
+        .get(BACKEND_URL + "/book", {
+          params: {
+            pageNum: pageNum,
+            title: title,
+            difficulty: difficulty,
+            language: language,
+          },
+        })
+        .then((response) => {
+          setPage(response.data.page);
+        })
+        .catch((error) => {
+          console.error("There was an error fetching the page!", error);
+        });
+    } else {
+      setPage(customBook[pageNum - 1]);
+    }
     // Save settings
     sessionStorage.setItem("title", title);
     sessionStorage.setItem("difficulty", difficulty);
@@ -89,13 +100,15 @@ function Home() {
     sessionStorage.setItem("font", font);
     sessionStorage.setItem("darkMode", darkMode);
     sessionStorage.setItem("page", page);
-  }, [title, pageNum, language, difficulty]);
+    sessionStorage.setItem("customBook", JSON.stringify(customBook));
+  }, [title, pageNum, language, difficulty, customBook]);
 
   const updateMistakeList = (mistake) => {
     mistakeList.current.push(mistake);
   };
 
   const handleClickBook = (newTitle) => {
+    setCustomBook([]); // Reset custom book when a new book is selected
     const details = document.getElementById("bookshelf_details");
     details.removeAttribute("open");
     setTitle(newTitle);
@@ -155,6 +168,9 @@ function Home() {
           <Bookshelf
             handleClickBook={handleClickBook}
             darkMode={darkMode}
+            setCustomBook={setCustomBook}
+            setPage={setPage}
+            setTitle={setTitle}
           ></Bookshelf>
         </details>
         <details>
@@ -215,6 +231,9 @@ function Home() {
           <Bookshelf
             handleClickBook={handleClickBook}
             darkMode={darkMode}
+            setCustomBook={setCustomBook}
+            setPage={setPage}
+            setTitle={setTitle}
           ></Bookshelf>
         </div>
         <BookPage

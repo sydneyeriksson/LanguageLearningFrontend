@@ -1,14 +1,13 @@
-// WordButton.js
-import React, { useState } from "react";
+// Paragraph.js
+import React from "react";
 import WordButton from "../components/WordButton";
 
 const Paragraph = ({ initialWord, id, updateMistakeList, language }) => {
-  const [word, setWord] = useState(initialWord);
-
   return (
-    <div class="paragraph">
-      {word.map((item, index) => (
+    <div className="paragraph">
+      {initialWord.map((item, index) => (
         <WordButton
+          key={`${id}-${index}-${item}`}
           initialWord={item}
           id={[id, index]}
           updateMistakeList={updateMistakeList}
@@ -19,4 +18,4 @@ const Paragraph = ({ initialWord, id, updateMistakeList, language }) => {
   );
 };
 
-export default Paragraph; // Export the component
+export default Paragraph;
