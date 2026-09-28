@@ -62,16 +62,10 @@ function Home() {
 
   // Get the new page from the server
   useEffect(() => {
-    if (location.state?.mistakeList) {
-      mistakeList.current = location.state.mistakeList;
-    }
     console.log(customBook);
     console.log(page);
     if (customBook && customBook.length === 0) {
       setPage([]);
-      if (location.state?.mistakeList) {
-        mistakeList.current = location.state.mistakeList;
-      }
 
       axios
         .get(BACKEND_URL + "/book", {
@@ -98,7 +92,14 @@ function Home() {
     sessionStorage.setItem("language", language);
     sessionStorage.setItem("page", page);
     sessionStorage.setItem("customBook", JSON.stringify(customBook));
-  }, [title, pageNum, language, difficulty, customBook]);
+  }, [title, pageNum, language, difficulty, customBook, page]);
+
+  // Keep the mistake list in sync with navigation state
+  useEffect(() => {
+    if (location.state?.mistakeList) {
+      mistakeList.current = location.state.mistakeList;
+    }
+  }, [location.state]);
 
   const updateMistakeList = (mistake) => {
     mistakeList.current.push(mistake);
